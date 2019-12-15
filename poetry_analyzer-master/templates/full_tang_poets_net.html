@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script type="text/javascript" src="../static/echarts-all-3.js"></script>
+  </head>
+  <body style="height: 100%; margin: 0">
+    <div id="container" style="height: 100%"></div>
+    <script type="text/javascript">
+      var dom = document.getElementById("container");
+      var myChart = echarts.init(dom);
+      var option = {
+        title: {
+          text: '',
+          top: '80%',
+          left: '50%'
+        },
+        tooltip: {
+          trigger:'item',
+          formatter:function(params){
+           if(params.data.name!=undefined){
+             return '人物:'+params.data.name;
+
+           }else{
+             return '关系:'+params.data.label;
+           }
+          }
+        },
+        animation: false,
+        series : [
+        {
+          name: '唐朝诗人社交网络',
+          type: 'graph',
+          layout: 'force',
+          draggable: true,
+          symbolSize: 28,
+          focusNodeAdjacency:true,
+          edgeSymbol:['circle', 'arrow'],
+          edgeSymbolSize:[4, 6],
+          label:{
+            normal:{
+              show:true,
+              textstyle:{
+                fontsize:10
+              },
+              formatter:function(params){
+                return params.data.name;
+              },
+            }
+          },
+          lineStyle:{
+            normal:{
+              curveness: 0.1,
+              color: 'rgb(50, 50, 50)'
+            }
+          },
+
+data:[
+{name: '令狐楚',value: 4 },
+{name: '楊凝式',value: 1 },
+{name: '元載',value: 1 },
+{name: '王昌齡',value: 11 },
+{name: '薛稷',value: 1 },
+{name: '吳筠',value: 3 },
+{name: '嚴維',value: 5 },
+{name: '韋丹',value: 4 },
+{name: '杜光庭',value: 1 },
+{name: '李端',value: 11 },
+{name: '韋渠牟',value: 15 },
+{name: '陳子昂',value: 5 },
+{name: '王維',value: 17 },
+{name: '吉中孚',value: 1 },
+{name: '李白',value: 39 },
+{name: '牛僧孺',value: 4 },
+{name: '裴光庭',value: 2 },
+{name: '顧況',value: 2 },
+{name: '顏真卿',value: 2 },
+{name: '李華',value: 2 },
+{name: '杜審言',value: 2 },
+{name: '司空圖',value: 2 },
+{name: '張渾',value: 1 },
+{name: '杜元穎',value: 1 },
+{name: '儲光羲',value: 5 },
+{name: '盧仝',value: 3 },
+{name: '薛能',value: 3 },
+{name: '杜牧',value: 12 },
+{name: '劉知幾',value: 1 },
+{name: '盧殷',value: 1 },
+{name: '張建封',value: 1 },
+{name: '張易之',value: 3 },
+{name: '皇甫湜',value: 2 },
+{name: '應物',value: 4 },
+{name: '徐堅',value: 1 },
+{name: '高適',value: 9 },
+{name: '李懷遠',value: 1 },
+{name: '王勣',value: 6 },
+{name: '李景',value: 1 },
+{name: '崔滌',value: 1 },
+{name: '鮑防',value: 2 },
+{name: '李觀',value: 3 },
+{name: '蘇頲',value: 3 },
+{name: '楊玉環',value: 3 },
+{name: '李程',value: 2 },
+{name: '袁高',value: 1 },
+{name: '元結',value: 2 },
+{name: '錢起',value: 9 },
+{name: '許棠',value: 2 },
+{name: '裴耀卿',value: 3 },
+{name: '馮道',value: 4 },
+{name: '賀知章',value: 4 },
+{name: '張登',value: 1 },
+{name: '薛戎',value: 1 },
+{name: '賈島',value: 15 },
+{name: '張說',value: 17 },
+{name: '蕭至忠',value: 1 },
+{name: '王無競',value: 4 },
+{name: '趙冬曦',value: 4 },
+{name: '韋應物',value: 9 },
+{name: '劉商',value: 1 },
+{name: '駱賓王',value: 3 },
+{name: '趙嘏',value: 6 },
+{name: '鄭良士',value: 3 },
+{name: '李清',value: 1 },
+{name: '楊衡',value: 1 },
+{name: '權德輿',value: 14 },
+{name: '鄭虔',value: 1 },
+{name: '白居易',value: 69 },
+{name: '白行簡',value: 1 },
+{name: '郭子儀',value: 2 },
+{name: '韋表微',value: 2 },
+{name: '劉崇龜',value: 1 },
+{name: '崔備',value: 2 },
+{name: '張謂',value: 2 },
+{name: '司馬承禎',value: 1 },
+{name: '岑參',value: 5 },
+{name: '劉言史',value: 3 },
+{name: '吳士矩',value: 1 },
+{name: '包佶',value: 1 },
+{name: '唐扶',value: 2 },
+{name: '裴度',value: 6 },
+{name: '劉長卿',value: 28 },
+{name: '楊巨源',value: 7 },
+{name: '劉方平',value: 1 },
+{name: '路應',value: 4 },
+{name: '武元衡',value: 3 },
+{name: '蕭昕',value: 1 },
+{name: '杜荀鶴',value: 3 },
+{name: '王質',value: 1 },
+{name: '李夷簡',value: 3 },
+{name: '楊虞卿',value: 2 },
+{name: '李澣',value: 4 },
+{name: '獨孤及',value: 1 },
+{name: '韓翃',value: 4 },
+{name: '陳希烈',value: 3 },
+{name: '楊於陵',value: 1 },
+{name: '魚玄機',value: 8 },
+{name: '王起',value: 3 },
+{name: '李吉甫',value: 2 },
+{name: '王建',value: 10 },
+{name: '楊汝士',value: 2 },
+{name: '薛據',value: 2 },
+{name: '韓偓',value: 2 },
+{name: '盧藏用',value: 1 },
+{name: '劉晏',value: 1 },
+{name: '羊士諤',value: 3 },
+{name: '劉媛',value: 1 },
+{name: '王涯',value: 3 },
+{name: '韋莊',value: 2 },
+{name: '姚崇',value: 2 },
+{name: '韓愈',value: 23 },
+{name: '李紓',value: 1 },
+{name: '崔邠',value: 5 },
+{name: '許渾',value: 16 },
+{name: '張祜',value: 10 },
+{name: '裴休',value: 1 },
+{name: '李泌',value: 2 },
+{name: '吳融',value: 4 },
+{name: '崔湜',value: 1 },
+{name: '賈至',value: 3 },
+{name: '張昭',value: 4 },
+{name: '鄭谷',value: 12 },
+{name: '李邕',value: 11 },
+{name: '元稹',value: 32 },
+{name: '李益',value: 5 },
+{name: '盧僎',value: 1 },
+{name: '皇甫冉',value: 16 },
+{name: '劉幽求',value: 1 },
+{name: '劉猛',value: 1 },
+{name: '李虞仲',value: 6 },
+{name: '韜光',value: 2 },
+{name: '虛中',value: 2 },
+{name: '蕭德言',value: 1 },
+{name: '陳陶',value: 1 },
+{name: '泠然',value: 2 },
+{name: '李德裕',value: 4 },
+{name: '崔立之',value: 1 },
+{name: '沈傳師',value: 2 },
+{name: '竇鞏',value: 3 },
+{name: '柳宗元',value: 6 },
+{name: '盧弼',value: 1 },
+{name: '秦系',value: 5 },
+{name: '王播',value: 1 },
+{name: '李商隱',value: 14 },
+{name: '張衆甫',value: 3 },
+{name: '鄭畋',value: 1 },
+{name: '皇甫曾',value: 3 },
+{name: '張繼',value: 7 },
+{name: '黃滔',value: 1 },
+{name: '韋夏卿',value: 2 },
+{name: '宋璟',value: 2 },
+{name: '鄭澣',value: 3 },
+{name: '盧鈞',value: 1 },
+{name: '王仲舒',value: 7 },
+{name: '張賁',value: 2 },
+{name: '馬總',value: 1 },
+{name: '鄭錫',value: 1 },
+{name: '張起',value: 1 },
+{name: '常達',value: 4 },
+{name: '陳羽',value: 1 },
+{name: '李諒',value: 5 },
+{name: '李適',value: 1 },
+{name: '王琚',value: 1 },
+{name: '李微',value: 2 },
+{name: '李絳',value: 2 },
+{name: '竇常',value: 17 },
+{name: '張旭',value: 3 },
+{name: '楊漢公',value: 1 },
+{name: '陸羽',value: 8 },
+{name: '沈千運',value: 1 },
+{name: '郎士元',value: 10 },
+{name: '楊嗣復',value: 5 },
+{name: '姚合',value: 14 },
+{name: '張喬',value: 2 },
+{name: '盧從願',value: 1 },
+{name: '知玄',value: 1 },
+{name: '崔成甫',value: 1 },
+{name: '唐彥謙',value: 1 },
+{name: '羅隱',value: 4 },
+{name: '韋嗣立',value: 8 },
+{name: '王氏',value: 1 },
+{name: '王仁裕',value: 1 },
+{name: '李嶠',value: 2 },
+{name: '席豫',value: 1 },
+{name: '張署',value: 1 },
+{name: '劉禹錫',value: 37 },
+{name: '高力士',value: 1 },
+{name: '崔玄亮',value: 2 },
+{name: '楊炎',value: 3 },
+{name: '裴迪',value: 3 },
+{name: '趙彥昭',value: 1 },
+{name: '杜甫',value: 53 },
+{name: '王喬',value: 2 },
+{name: '柳渾',value: 1 },
+{name: '沈彬',value: 1 },
+{name: '劉憲',value: 2 },
+{name: '靈澈',value: 3 },
+{name: '高崇文',value: 1 },
+{name: '李幼卿',value: 1 },
+{name: '李渤',value: 12 },
+{name: '李建',value: 3 },
+{name: '孟浩然',value: 11 },
+{name: '王縉',value: 1 },
+{name: '馬周',value: 1 },
+{name: '李嘉祐',value: 7 },
+{name: '嚴武',value: 2 },
+{name: '蘇渙',value: 1 },
+{name: '楊凌',value: 1 },
+{name: '王晙',value: 2 },
+{name: '竇羣',value: 1 },
+{name: '裴皞',value: 4 },
+{name: '皎然',value: 18 },
+{name: '趙璜',value: 1 },
+{name: '吳丹',value: 1 },
+{name: '沈佺期',value: 6 },
+{name: '雲表',value: 1 },
+{name: '陸龜蒙',value: 7 },
+{name: '孟郊',value: 21 },
+{name: '韓湘',value: 9 },
+{name: '顧雲',value: 4 },
+{name: '釋明解',value: 1 },
+{name: '王衍',value: 4 },
+{name: '源乾曜',value: 1 },
+{name: '孟雲卿',value: 1 },
+{name: '王勃',value: 3 },
+{name: '宋之問',value: 9 },
+{name: '朱放',value: 2 },
+{name: '張九齡',value: 6 },
+{name: '竇叔向',value: 2 },
+{name: '楊憑',value: 2 },
+{name: '李適之',value: 1 },
+{name: '苗發',value: 1 },
+{name: '薛濤',value: 1 },
+{name: '張籍',value: 19 },
+{name: '崔融',value: 1 },
+{name: '舒元輿',value: 1 },
+{name: '潘孟陽',value: 1 },
+{name: '李逢吉',value: 9 },
+{name: '李紳',value: 5 },
+{name: '呂溫',value: 6 },
+{name: '張漸',value: 1 },
+{name: '崔氏',value: 2 },
+{name: '喬知之',value: 1 },
+{name: '李賢',value: 1 },
+{name: '皮日休',value: 9 },
+{name: '李賀',value: 1 },
+{name: '貫休',value: 13 },
+{name: '戴叔倫',value: 2 },
+{name: '令狐綯',value: 2 },
+{name: '鄭絪',value: 4 },
+],
+links: [
+{source: '陸龜蒙', target: '皮日休'
+    },
+   {source: '白居易', target: '元稹'
+    },
+   {source: '劉禹錫', target: '白居易'
+    },
+   {source: '皮日休', target: '陸龜蒙'
+    },
+   {source: '白居易', target: '劉禹錫'
+    },
+   {source: '元稹', target: '白居易'
+    },
+   {source: '白居易', target: '崔玄亮'
+    },
+   {source: '白居易', target: '李逢吉'
+    },
+   {source: '皇甫冉', target: '劉長卿'
+    },
+   {source: '白居易', target: '牛僧孺'
+    },
+   {source: '白居易', target: '李渤'
+    },
+   {source: '白居易', target: '李建'
+    },
+   {source: '白居易', target: '李紳'
+    },
+   {source: '韓愈', target: '張籍'
+    },
+   {source: '白居易', target: '楊汝士'
+    },
+   {source: '劉禹錫', target: '裴度'
+    },
+   {source: '白居易', target: '張籍'
+    },
+   {source: '白居易', target: '裴度'
+    },
+   {source: '宋之問', target: '沈佺期'
+    },
+   {source: '白居易', target: '李夷簡'
+    },
+   {source: '杜甫', target: '李白'
+    },
+   {source: '韓愈', target: '孟郊'
+    },
+   {source: '姚合', target: '賈島'
+    },
+   {source: '杜甫', target: '鄭虔'
+    },
+   {source: '李端', target: '韋丹'
+    },
+   {source: '李端', target: '鄭絪'
+    },
+   {source: '沈佺期', target: '宋之問'
+    },
+   {source: '劉禹錫', target: '元稹'
+    },
+   {source: '元稹', target: '李諒'
+    },
+   {source: '白居易', target: '王仲舒'
+    },
+   {source: '劉長卿', target: '皇甫冉'
+    },
+   {source: '杜甫', target: '高適'
+    },
+   {source: '白居易', target: '李諒'
+    },
+   {source: '王維', target: '裴迪'
+    },
+   {source: '張賁', target: '皮日休'
+    },
+   {source: '劉禹錫', target: '楊虞卿'
+    },
+   {source: '孟郊', target: '韓愈'
+    },
+   {source: '韓愈', target: '張署'
+    },
+   {source: '皇甫冉', target: '劉方平'
+    },
+   {source: '杜牧', target: '許渾'
+    },
+   {source: '皎然', target: '李泌'
+    },
+   {source: '杜甫', target: '王仲舒'
+    },
+   {source: '元稹', target: '李渤'
+    },
+   {source: '姚合', target: '李白'
+    },
+   {source: '杜甫', target: '鄭澣'
+    },
+   {source: '白居易', target: '楊虞卿'
+    },
+   {source: '張籍', target: '王建'
+    },
+   {source: '元稹', target: '李建'
+    },
+   {source: '白居易', target: '楊嗣復'
+    },
+   {source: '白居易', target: '崔邠'
+    },
+   {source: '皎然', target: '陸羽'
+    },
+   {source: '王維', target: '張易之'
+    },
+   {source: '杜甫', target: '李渤'
+    },
+   {source: '劉長卿', target: '秦系'
+    },
+   {source: '元稹', target: '竇鞏'
+    },
+   {source: '白居易', target: '李澣'
+    },
+   {source: '錢起', target: '郎士元'
+    },
+   {source: '李白', target: '李虞仲'
+    },
+   {source: '鄭谷', target: '杜甫'
+    },
+   {source: '張祜', target: '楊玉環'
+    },
+   {source: '柳宗元', target: '劉禹錫'
+    },
+   {source: '王建', target: '張籍'
+    },
+   {source: '賈島', target: '姚合'
+    },
+   {source: '蕭至忠', target: '劉憲'
+    },
+   {source: '杜甫', target: '岑參'
+    },
+   {source: '杜牧', target: '王仲舒'
+    },
+   {source: '皎然', target: '韋渠牟'
+    },
+   {source: '元稹', target: '李夷簡'
+    },
+   {source: '郎士元', target: '皇甫冉'
+    },
+   {source: '元稹', target: '楊巨源'
+    },
+   {source: '白居易', target: '崔備'
+    },
+   {source: '元稹', target: '楊憑'
+    },
+   {source: '白居易', target: '楊憑'
+    },
+   {source: '錢起', target: '王維'
+    },
+   {source: '李白', target: '李逢吉'
+    },
+   {source: '韓愈', target: '李逢吉'
+    },
+   {source: '白居易', target: '王起'
+    },
+   {source: '皎然', target: '靈澈'
+    },
+   {source: '鄭谷', target: '李白'
+    },
+   {source: '皇甫冉', target: '郎士元'
+    },
+   {source: '韓愈', target: '馬總'
+    },
+   {source: '白居易', target: '王質'
+    },
+   {source: '李白', target: '孟浩然'
+    },
+   {source: '李端', target: '吉中孚'
+    },
+   {source: '張籍', target: '賈島'
+    },
+   {source: '魚玄機', target: '王勃'
+    },
+   {source: '杜牧', target: '張祜'
+    },
+   {source: '張喬', target: '許棠'
+    },
+   {source: '儲光羲', target: '張籍'
+    },
+   {source: '劉禹錫', target: '張籍'
+    },
+   {source: '嚴維', target: '劉長卿'
+    },
+   {source: '白居易', target: '王播'
+    },
+   {source: '劉長卿', target: '嚴維'
+    },
+   {source: '杜甫', target: '王喬'
+    },
+   {source: '白居易', target: '李邕'
+    },
+   {source: '孟郊', target: '李觀'
+    },
+   {source: '裴度', target: '白居易'
+    },
+   {source: '張籍', target: '白居易'
+    },
+   {source: '元稹', target: '王仲舒'
+    },
+   {source: '劉禹錫', target: '楊嗣復'
+    },
+   {source: '韓翃', target: '張繼'
+    },
+   {source: '張繼', target: '韓翃'
+    },
+   {source: '權德輿', target: '王衍'
+    },
+   {source: '孟浩然', target: '王昌齡'
+    },
+   {source: '儲光羲', target: '王維'
+    },
+   {source: '白居易', target: '李絳'
+    },
+   {source: '皇甫冉', target: '張昭'
+    },
+   {source: '李白', target: '竇常'
+    },
+   {source: '羅隱', target: '竇常'
+    },
+   {source: '白居易', target: '李吉甫'
+    },
+   {source: '劉長卿', target: '靈澈'
+    },
+   {source: '劉長卿', target: '李渤'
+    },
+   {source: '李商隱', target: '令狐綯'
+    },
+   {source: '賈島', target: '令狐綯'
+    },
+   {source: '元稹', target: '裴光庭'
+    },
+   {source: '貫休', target: '李白'
+    },
+   {source: '白居易', target: '王勣'
+    },
+   {source: '許渾', target: '李澣'
+    },
+   {source: '白居易', target: '李虞仲'
+    },
+   {source: '羅隱', target: '杜甫'
+    },
+   {source: '張賁', target: '陸龜蒙'
+    },
+   {source: '趙嘏', target: '許渾'
+    },
+   {source: '鄭谷', target: '賈島'
+    },
+   {source: '賈島', target: '韓愈'
+    },
+   {source: '劉禹錫', target: '李程'
+    },
+   {source: '張九齡', target: '王建'
+    },
+   {source: '姚合', target: '王建'
+    },
+   {source: '賈島', target: '王建'
+    },
+   {source: '劉禹錫', target: '柳宗元'
+    },
+   {source: '權德輿', target: '張籍'
+    },
+   {source: '賈島', target: '張籍'
+    },
+   {source: '鄭谷', target: '張籍'
+    },
+   {source: '劉長卿', target: '皇甫曾'
+    },
+   {source: '李嘉祐', target: '劉長卿'
+    },
+   {source: '白居易', target: '吳丹'
+    },
+   {source: '杜甫', target: '王無競'
+    },
+   {source: '白居易', target: '李華'
+    },
+   {source: '劉禹錫', target: '魚玄機'
+    },
+   {source: '許渾', target: '魚玄機'
+    },
+   {source: '李白', target: '李邕'
+    },
+   {source: '元稹', target: '李邕'
+    },
+   {source: '劉長卿', target: '李嘉祐'
+    },
+   {source: '白居易', target: '裴皞'
+    },
+   {source: '牛僧孺', target: '白居易'
+    },
+   {source: '劉禹錫', target: '張漸'
+    },
+   {source: '儲光羲', target: '王仲舒'
+    },
+   {source: '郎士元', target: '張繼'
+    },
+   {source: '韓愈', target: '皇甫湜'
+    },
+   {source: '李賀', target: '皇甫湜'
+    },
+   {source: '王維', target: '韋渠牟'
+    },
+   {source: '韋應物', target: '韋渠牟'
+    },
+   {source: '岑參', target: '韋渠牟'
+    },
+   {source: '白居易', target: '韋渠牟'
+    },
+   {source: '皮日休', target: '韋渠牟'
+    },
+   {source: '李商隱', target: '張衆甫'
+    },
+   {source: '宋璟', target: '張說'
+    },
+   {source: '趙冬曦', target: '張說'
+    },
+   {source: '白居易', target: '劉知幾'
+    },
+   {source: '杜甫', target: '路應'
+    },
+   {source: '杜牧', target: '李商隱'
+    },
+   {source: '李嘉祐', target: '皇甫冉'
+    },
+   {source: '李端', target: '鄭錫'
+    },
+   {source: '吳融', target: '貫休'
+    },
+   {source: '李白', target: '張旭'
+    },
+   {source: '杜甫', target: '張旭'
+    },
+   {source: '李白', target: '王昌齡'
+    },
+   {source: '白居易', target: '王昌齡'
+    },
+   {source: '羅隱', target: '王昌齡'
+    },
+   {source: '裴迪', target: '王維'
+    },
+   {source: '貫休', target: '王維'
+    },
+   {source: '武元衡', target: '陸羽'
+    },
+   {source: '權德輿', target: '陸羽'
+    },
+   {source: '元稹', target: '李絳'
+    },
+   {source: '杜甫', target: '張昭'
+    },
+   {source: '白居易', target: '陳希烈'
+    },
+   {source: '張籍', target: '竇常'
+    },
+   {source: '陸龜蒙', target: '竇常'
+    },
+   {source: '杜甫', target: '李逢吉'
+    },
+   {source: '劉禹錫', target: '李逢吉'
+    },
+   {source: '皎然', target: '李逢吉'
+    },
+   {source: '元稹', target: '王起'
+    },
+   {source: '李商隱', target: '杜牧'
+    },
+   {source: '趙嘏', target: '杜牧'
+    },
+   {source: '元稹', target: '李吉甫'
+    },
+   {source: '李白', target: '韋夏卿'
+    },
+   {source: '許渾', target: '王氏'
+    },
+   {source: '王昌齡', target: '李渤'
+    },
+   {source: '姚合', target: '李渤'
+    },
+   {source: '杜甫', target: '孟雲卿'
+    },
+   {source: '皎然', target: '秦系'
+    },
+   {source: '李白', target: '裴光庭'
+    },
+   {source: '李白', target: '趙璜'
+    },
+   {source: '李端', target: '苗發'
+    },
+   {source: '韋莊', target: '李白'
+    },
+   {source: '許渾', target: '王勣'
+    },
+   {source: '杜甫', target: '沈佺期'
+    },
+   {source: '杜甫', target: '孟郊'
+    },
+   {source: '賈島', target: '孟郊'
+    },
+   {source: '白居易', target: '白行簡'
+    },
+   {source: '張繼', target: '郎士元'
+    },
+   {source: '劉禹錫', target: '顏真卿'
+    },
+   {source: '貫休', target: '李虞仲'
+    },
+   {source: '韓愈', target: '李虞仲'
+    },
+   {source: '孟郊', target: '李益'
+    },
+   {source: '李白', target: '杜甫'
+    },
+   {source: '李商隱', target: '杜甫'
+    },
+   {source: '貫休', target: '杜甫'
+    },
+   {source: '高適', target: '李德裕'
+    },
+   {source: '張九齡', target: '韓湘'
+    },
+   {source: '劉長卿', target: '韓湘'
+    },
+   {source: '杜牧', target: '趙嘏'
+    },
+   {source: '許渾', target: '趙嘏'
+    },
+   {source: '杜荀鶴', target: '賈島'
+    },
+   {source: '貫休', target: '賈島'
+    },
+   {source: '張說', target: '趙冬曦'
+    },
+   {source: '張籍', target: '韓愈'
+    },
+   {source: '白居易', target: '韓愈'
+    },
+   {source: '李嶠', target: '宋之問'
+    },
+   {source: '駱賓王', target: '宋之問'
+    },
+   {source: '裴度', target: '劉禹錫'
+    },
+   {source: '元稹', target: '劉禹錫'
+    },
+   {source: '牛僧孺', target: '劉禹錫'
+    },
+   {source: '高適', target: '薛據'
+    },
+   {source: '杜甫', target: '薛據'
+    },
+   {source: '孟郊', target: '張籍'
+    },
+   {source: '姚合', target: '張籍'
+    },
+   {source: '韋應物', target: '雲表'
+    },
+   {source: '元稹', target: '王琚'
+    },
+   {source: '權德輿', target: '應物'
+    },
+   {source: '李白', target: '馮道'
+    },
+   {source: '皇甫冉', target: '馮道'
+    },
+   {source: '白居易', target: '馮道'
+    },
+   {source: '孟郊', target: '盧殷'
+    },
+   {source: '高適', target: '李諒'
+    },
+   {source: '韋應物', target: '李諒'
+    },
+   {source: '元稹', target: '李華'
+    },
+   {source: '李嘉祐', target: '嚴維'
+    },
+   {source: '皇甫冉', target: '嚴維'
+    },
+   {source: '李白', target: '王喬'
+    },
+   {source: '韓愈', target: '王涯'
+    },
+   {source: '武元衡', target: '魚玄機'
+    },
+   {source: '李商隱', target: '魚玄機'
+    },
+   {source: '劉禹錫', target: '李邕'
+    },
+   {source: '杜荀鶴', target: '顧雲'
+    },
+   {source: '劉禹錫', target: '崔玄亮'
+    },
+   {source: '韓愈', target: '李紳'
+    },
+   {source: '韓愈', target: '盧仝'
+    },
+   {source: '鄭谷', target: '張起'
+    },
+   {source: '李白', target: '韋表微'
+    },
+   {source: '白居易', target: '韋表微'
+    },
+   {source: '權德輿', target: '裴皞'
+    },
+   {source: '韓愈', target: '裴皞'
+    },
+   {source: '劉禹錫', target: '裴皞'
+    },
+   {source: '令狐楚', target: '白居易'
+    },
+   {source: '李紳', target: '白居易'
+    },
+   {source: '錢起', target: '王仲舒'
+    },
+   {source: '李商隱', target: '王仲舒'
+    },
+   {source: '劉長卿', target: '裴休'
+    },
+   {source: '劉長卿', target: '楊於陵'
+    },
+   {source: '李白', target: '楊嗣復'
+    },
+   {source: '武元衡', target: '楊嗣復'
+    },
+   {source: '杜牧', target: '楊嗣復'
+    },
+   {source: '許渾', target: '獨孤及'
+    },
+   {source: '皇甫冉', target: '張繼'
+    },
+   {source: '李益', target: '韓翃'
+    },
+   {source: '白居易', target: '楊漢公'
+    },
+   {source: '陳子昂', target: '喬知之'
+    },
+   {source: '劉長卿', target: '柳渾'
+    },
+   {source: '杜甫', target: '沈傳師'
+    },
+   {source: '韓愈', target: '沈傳師'
+    },
+   {source: '孟浩然', target: '韋渠牟'
+    },
+   {source: '杜甫', target: '韋渠牟'
+    },
+   {source: '戴叔倫', target: '韋渠牟'
+    },
+   {source: '劉禹錫', target: '韋渠牟'
+    },
+   {source: '楊衡', target: '韋渠牟'
+    },
+   {source: '姚合', target: '韋渠牟'
+    },
+   {source: '張祜', target: '韋渠牟'
+    },
+   {source: '羅隱', target: '韋渠牟'
+    },
+   {source: '黃滔', target: '韋渠牟'
+    },
+   {source: '劉禹錫', target: '牛僧孺'
+    },
+   {source: '元稹', target: '姚崇'
+    },
+   {source: '白居易', target: '姚崇'
+    },
+   {source: '貫休', target: '陳陶'
+    },
+   {source: '杜甫', target: '張衆甫'
+    },
+   {source: '皎然', target: '張衆甫'
+    },
+   {source: '劉禹錫', target: '呂溫'
+    },
+   {source: '蘇頲', target: '張說'
+    },
+   {source: '源乾曜', target: '張說'
+    },
+   {source: '徐堅', target: '張說'
+    },
+   {source: '席豫', target: '張說'
+    },
+   {source: '賀知章', target: '張說'
+    },
+   {source: '呂溫', target: '李夷簡'
+    },
+   {source: '李白', target: '賀知章'
+    },
+   {source: '白居易', target: '賀知章'
+    },
+   {source: '杜甫', target: '王衍'
+    },
+   {source: '陸龜蒙', target: '王衍'
+    },
+   {source: '王仁裕', target: '王衍'
+    },
+   {source: '杜甫', target: '薛稷'
+    },
+   {source: '元稹', target: '杜元穎'
+    },
+   {source: '白居易', target: '路應'
+    },
+   {source: '許渾', target: '路應'
+    },
+   {source: '薛能', target: '路應'
+    },
+   {source: '貫休', target: '蕭德言'
+    },
+   {source: '劉長卿', target: '李商隱'
+    },
+   {source: '張繼', target: '皇甫冉'
+    },
+   {source: '李白', target: '崔成甫'
+    },
+   {source: '白居易', target: '舒元輿'
+    },
+   {source: '陳子昂', target: '鮑防'
+    },
+   {source: '杜甫', target: '鮑防'
+    },
+   {source: '王建', target: '楊巨源'
+    },
+   {source: '白居易', target: '楊巨源'
+    },
+   {source: '陸龜蒙', target: '楊巨源'
+    },
+   {source: '元稹', target: '司馬承禎'
+    },
+   {source: '顧況', target: '朱放'
+    },
+   {source: '柳宗元', target: '崔備'
+    },
+   {source: '張說', target: '崔邠'
+    },
+   {source: '孟浩然', target: '崔邠'
+    },
+   {source: '高適', target: '崔邠'
+    },
+   {source: '韓愈', target: '崔邠'
+    },
+   {source: '裴耀卿', target: '張旭'
+    },
+   {source: '皇甫曾', target: '權德輿'
+    },
+   {source: '皇甫冉', target: '權德輿'
+    },
+   {source: '潘孟陽', target: '權德輿'
+    },
+   {source: '王維', target: '王昌齡'
+    },
+   {source: '岑參', target: '王昌齡'
+    },
+   {source: '高適', target: '王昌齡'
+    },
+   {source: '杜甫', target: '賈至'
+    },
+   {source: '王昌齡', target: '王維'
+    },
+   {source: '白居易', target: '王維'
+    },
+   {source: '張祜', target: '王維'
+    },
+   {source: '皎然', target: '王維'
+    },
+   {source: '盧僎', target: '陸羽'
+    },
+   {source: '孟浩然', target: '陸羽'
+    },
+   {source: '皇甫冉', target: '陸羽'
+    },
+   {source: '戴叔倫', target: '陸羽'
+    },
+   {source: '孟郊', target: '陸羽'
+    },
+   {source: '白居易', target: '知玄'
+    },
+   {source: '杜甫', target: '李適'
+    },
+   {source: '權德輿', target: '張昭'
+    },
+   {source: '劉言史', target: '張昭'
+    },
+   {source: '元稹', target: '吳士矩'
+    },
+   {source: '孟浩然', target: '張易之'
+    },
+   {source: '李白', target: '張易之'
+    },
+   {source: '李白', target: '陳希烈'
+    },
+   {source: '杜甫', target: '陳希烈'
+    },
+   {source: '駱賓王', target: '竇常'
+    },
+   {source: '令狐楚', target: '竇常'
+    },
+   {source: '宋之問', target: '竇常'
+    },
+   {source: '杜甫', target: '竇常'
+    },
+   {source: '王建', target: '竇常'
+    },
+   {source: '劉商', target: '竇常'
+    },
+   {source: '孟郊', target: '竇常'
+    },
+   {source: '白居易', target: '竇常'
+    },
+   {source: '姚合', target: '竇常'
+    },
+   {source: '張祜', target: '竇常'
+    },
+   {source: '李商隱', target: '竇常'
+    },
+   {source: '賈島', target: '竇常'
+    },
+   {source: '鄭谷', target: '竇常'
+    },
+   {source: '鄭谷', target: '司空圖'
+    },
+   {source: '王維', target: '錢起'
+    },
+   {source: '郎士元', target: '錢起'
+    },
+   {source: '權德輿', target: '李逢吉'
+    },
+   {source: '楊巨源', target: '李逢吉'
+    },
+   {source: '令狐楚', target: '李逢吉'
+    },
+   {source: '杜甫', target: '裴迪'
+    },
+   {source: '羊士諤', target: '王起'
+    },
+   {source: '張說', target: '韋丹'
+    },
+   {source: '儲光羲', target: '韋丹'
+    },
+   {source: '許渾', target: '韋丹'
+    },
+   {source: '楊巨源', target: '皎然'
+    },
+   {source: '李端', target: '皎然'
+    },
+   {source: '孟郊', target: '皎然'
+    },
+   {source: '張祜', target: '杜牧'
+    },
+   {source: '劉長卿', target: '張謂'
+    },
+   {source: '白居易', target: '韋夏卿'
+    },
+   {source: '權德輿', target: '靈澈'
+    },
+   {source: '劉長卿', target: '皮日休'
+    },
+   {source: '白居易', target: '皮日休'
+    },
+   {source: '貫休', target: '皮日休'
+    },
+   {source: '張說', target: '李渤'
+    },
+   {source: '韋應物', target: '李渤'
+    },
+   {source: '賈至', target: '李渤'
+    },
+   {source: '權德輿', target: '李渤'
+    },
+   {source: '呂溫', target: '李渤'
+    },
+   {source: '李商隱', target: '李渤'
+    },
+   {source: '韓愈', target: '崔立之'
+    },
+   {source: '劉長卿', target: '李微'
+    },
+   {source: '貫休', target: '李微'
+    },
+   {source: '高適', target: '沈千運'
+    },
+   {source: '韋應物', target: '秦系'
+    },
+   {source: '王昌齡', target: '高適'
+    },
+   {source: '元稹', target: '李景'
+    },
+   {source: '皎然', target: '袁高'
+    },
+   {source: '張繼', target: '竇叔向'
+    },
+   {source: '皇甫冉', target: '竇叔向'
+    },
+   {source: '白居易', target: '楊凝式'
+    },
+   {source: '白居易', target: '竇鞏'
+    },
+   {source: '李白', target: '薛戎'
+    },
+   {source: '蘇頲', target: '李白'
+    },
+   {source: '劉禹錫', target: '李白'
+    },
+   {source: '賈至', target: '李白'
+    },
+   {source: '孟郊', target: '李白'
+    },
+   {source: '張祜', target: '李白'
+    },
+   {source: '杜牧', target: '李白'
+    },
+   {source: '趙嘏', target: '李白'
+    },
+   {source: '羊士諤', target: '王勣'
+    },
+   {source: '趙嘏', target: '王勣'
+    },
+   {source: '薛能', target: '王勣'
+    },
+   {source: '鄭谷', target: '王勣'
+    },
+   {source: '韋應物', target: '李懷遠'
+    },
+   {source: '杜甫', target: '鄭谷'
+    },
+   {source: '皎然', target: '鄭谷'
+    },
+   {source: '李白', target: '李澣'
+    },
+   {source: '李德裕', target: '李澣'
+    },
+   {source: '裴耀卿', target: '張九齡'
+    },
+   {source: '皎然', target: '張九齡'
+    },
+   {source: '張籍', target: '孟郊'
+    },
+   {source: '劉言史', target: '孟郊'
+    },
+   {source: '裴耀卿', target: '張登'
+    },
+   {source: '沈佺期', target: '泠然'
+    },
+   {source: '吳筠', target: '泠然'
+    },
+   {source: '呂溫', target: '竇羣'
+    },
+   {source: '孟郊', target: '鄭良士'
+    },
+   {source: '白居易', target: '鄭良士'
+    },
+   {source: '杜荀鶴', target: '鄭良士'
+    },
+   {source: '劉長卿', target: '郎士元'
+    },
+   {source: '李端', target: '郎士元'
+    },
+   {source: '白居易', target: '韜光'
+    },
+   {source: '姚合', target: '韜光'
+    },
+   {source: '秦系', target: '張建封'
+    },
+   {source: '韋應物', target: '楊凌'
+    },
+   {source: '皎然', target: '顏真卿'
+    },
+   {source: '岑參', target: '李虞仲'
+    },
+   {source: '皮日休', target: '李虞仲'
+    },
+   {source: '王維', target: '王縉'
+    },
+   {source: '張說', target: '鄭絪'
+    },
+   {source: '儲光羲', target: '鄭絪'
+    },
+   {source: '許渾', target: '鄭絪'
+    },
+   {source: '韓翃', target: '李益'
+    },
+   {source: '王建', target: '李益'
+    },
+   {source: '賈島', target: '李益'
+    },
+   {source: '李商隱', target: '鄭畋'
+    },
+   {source: '貫休', target: '郭子儀'
+    },
+   {source: '高適', target: '杜甫'
+    },
+   {source: '錢起', target: '杜甫'
+    },
+   {source: '嚴武', target: '杜甫'
+    },
+   {source: '白居易', target: '杜甫'
+    },
+   {source: '皮日休', target: '杜甫'
+    },
+   {source: '杜甫', target: '蘇渙'
+    },
+   {source: '杜甫', target: '嚴武'
+    },
+   {source: '韓偓', target: '吳融'
+    },
+   {source: '貫休', target: '吳融'
+    },
+   {source: '吳筠', target: '張渾'
+    },
+   {source: '崔湜', target: '韋嗣立'
+    },
+   {source: '李嶠', target: '韋嗣立'
+    },
+   {source: '劉憲', target: '韋嗣立'
+    },
+   {source: '蘇頲', target: '韋嗣立'
+    },
+   {source: '張說', target: '韋嗣立'
+    },
+   {source: '沈佺期', target: '韋嗣立'
+    },
+   {source: '趙彥昭', target: '韋嗣立'
+    },
+   {source: '杜甫', target: '韋嗣立'
+    },
+   {source: '鄭澣', target: '李賢'
+    },
+   {source: '王維', target: '孟浩然'
+    },
+   {source: '杜甫', target: '孟浩然'
+    },
+   {source: '白居易', target: '孟浩然'
+    },
+   {source: '張祜', target: '孟浩然'
+    },
+   {source: '張說', target: '王晙'
+    },
+   {source: '張祜', target: '劉崇龜'
+    },
+   {source: '錢起', target: '李德裕'
+    },
+   {source: '鄭澣', target: '李德裕'
+    },
+   {source: '宋之問', target: '杜審言'
+    },
+   {source: '姚合', target: '許渾'
+    },
+   {source: '韓偓', target: '許渾'
+    },
+   {source: '郎士元', target: '李紓'
+    },
+   {source: '杜甫', target: '杜光庭'
+    },
+   {source: '陳子昂', target: '韓湘'
+    },
+   {source: '杜甫', target: '韓湘'
+    },
+   {source: '羊士諤', target: '韓湘'
+    },
+   {source: '劉禹錫', target: '韓湘'
+    },
+   {source: '元稹', target: '韓湘'
+    },
+   {source: '姚合', target: '韓湘'
+    },
+   {source: '賈島', target: '韓湘'
+    },
+   {source: '郭子儀', target: '馬周'
+    },
+   {source: '元稹', target: '楊玉環'
+    },
+   {source: '白居易', target: '楊玉環'
+    },
+   {source: '劉禹錫', target: '楊炎'
+    },
+   {source: '呂溫', target: '楊炎'
+    },
+   {source: '白居易', target: '楊炎'
+    },
+   {source: '元稹', target: '劉猛'
+    },
+   {source: '元稹', target: '薛濤'
+    },
+   {source: '孟浩然', target: '常達'
+    },
+   {source: '李端', target: '常達'
+    },
+   {source: '權德輿', target: '常達'
+    },
+   {source: '白居易', target: '常達'
+    },
+   {source: '韓愈', target: '賈島'
+    },
+   {source: '薛能', target: '李清'
+    },
+   {source: '孟郊', target: '王勃'
+    },
+   {source: '李白', target: '王勃'
+    },
+   {source: '皎然', target: '劉媛'
+    },
+   {source: '王維', target: '崔滌'
+    },
+   {source: '許渾', target: '劉幽求'
+    },
+   {source: '張九齡', target: '趙冬曦'
+    },
+   {source: '杜牧', target: '趙冬曦'
+    },
+   {source: '李商隱', target: '釋明解'
+    },
+   {source: '皇甫冉', target: '包佶'
+    },
+   {source: '王無競', target: '宋之問'
+    },
+   {source: '王昌齡', target: '宋之問'
+    },
+   {source: '李白', target: '張祜'
+    },
+   {source: '李白', target: '崔氏'
+    },
+   {source: '杜甫', target: '崔氏'
+    },
+   {source: '貫休', target: '李程'
+    },
+   {source: '韓愈', target: '劉禹錫'
+    },
+   {source: '李白', target: '劉禹錫'
+    },
+   {source: '令狐楚', target: '劉禹錫'
+    },
+   {source: '姚合', target: '劉禹錫'
+    },
+   {source: '元稹', target: '王建'
+    },
+   {source: '鄭谷', target: '許棠'
+    },
+   {source: '李端', target: '虛中'
+    },
+   {source: '權德輿', target: '虛中'
+    },
+   {source: '唐彥謙', target: '李適之'
+    },
+   {source: '劉長卿', target: '柳宗元'
+    },
+   {source: '韓愈', target: '柳宗元'
+    },
+   {source: '劉長卿', target: '李幼卿'
+    },
+   {source: '宋之問', target: '張籍'
+    },
+   {source: '韋莊', target: '張籍'
+    },
+   {source: '杜甫', target: '陳子昂'
+    },
+   {source: '司空圖', target: '陳子昂'
+    },
+   {source: '朱放', target: '皇甫曾'
+    },
+   {source: '顧況', target: '劉長卿'
+    },
+   {source: '張謂', target: '劉長卿'
+    },
+   {source: '郎士元', target: '劉長卿'
+    },
+   {source: '劉禹錫', target: '劉長卿'
+    },
+   {source: '元稹', target: '劉長卿'
+    },
+   {source: '錢起', target: '蕭昕'
+    },
+   {source: '劉禹錫', target: '盧鈞'
+    },
+   {source: '呂溫', target: '李建'
+    },
+   {source: '劉長卿', target: '應物'
+    },
+   {source: '皎然', target: '應物'
+    },
+   {source: '吳筠', target: '應物'
+    },
+   {source: '竇鞏', target: '元稹'
+    },
+   {source: '吳融', target: '馮道'
+    },
+   {source: '劉禹錫', target: '楊汝士'
+    },
+   {source: '鄭谷', target: '張喬'
+    },
+   {source: '盧從願', target: '元載'
+    },
+   {source: '李白', target: '唐扶'
+    },
+   {source: '張說', target: '唐扶'
+    },
+   {source: '韓愈', target: '王無競'
+    },
+   {source: '孟郊', target: '王無競'
+    },
+   {source: '劉禹錫', target: '元結'
+    },
+   {source: '李商隱', target: '元結'
+    },
+   {source: '張籍', target: '姚合'
+    },
+   {source: '劉禹錫', target: '李諒'
+    },
+   {source: '孟郊', target: '劉言史'
+    },
+   {source: '秦系', target: '嚴維'
+    },
+   {source: '韋應物', target: '李泌'
+    },
+   {source: '杜甫', target: '王涯'
+    },
+   {source: '孟郊', target: '王涯'
+    },
+   {source: '張說', target: '宋璟'
+    },
+   {source: '張九齡', target: '魚玄機'
+    },
+   {source: '錢起', target: '魚玄機'
+    },
+   {source: '王晙', target: '李邕'
+    },
+   {source: '張說', target: '李邕'
+    },
+   {source: '賀知章', target: '李邕'
+    },
+   {source: '杜甫', target: '李邕'
+    },
+   {source: '楊巨源', target: '李邕'
+    },
+   {source: '杜牧', target: '李邕'
+    },
+   {source: '許渾', target: '李邕'
+    },
+   {source: '韋應物', target: '盧藏用'
+    },
+   {source: '王維', target: '顧雲'
+    },
+   {source: '陳羽', target: '顧雲'
+    },
+   {source: '李商隱', target: '顧雲'
+    },
+   {source: '皎然', target: '盧弼'
+    },
+   {source: '杜審言', target: '崔融'
+    },
+   {source: '岑參', target: '李嘉祐'
+    },
+   {source: '劉禹錫', target: '李嘉祐'
+    },
+   {source: '白居易', target: '李嘉祐'
+    },
+   {source: '杜甫', target: '李紳'
+    },
+   {source: '劉禹錫', target: '李紳'
+    },
+   {source: '柳宗元', target: '高崇文'
+    },
+   {source: '劉長卿', target: '李端'
+    },
+   {source: '杜甫', target: '李端'
+    },
+   {source: '沈佺期', target: '高力士'
+    },
+   {source: '杜甫', target: '劉晏'
+    },
+   {source: '王建', target: '裴度'
+    },
+   {source: '姚合', target: '裴度'
+    },
+   {source: '孟郊', target: '盧仝'
+    },
+   {source: '白居易', target: '沈彬'
+    },
+   {source: '皇甫冉', target: '李觀'
+    },
+   {source: '韓愈', target: '李觀'
+    },
+   ],
+          roam: false,
+          force: {
+            edgeLength:[100,200],
+            repulsion: 100
+          }
+        }
+        ]
+      };
+
+      myChart.setOption(option);
+    </script>
+  </body>
+</html>

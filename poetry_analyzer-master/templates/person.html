@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script type="text/javascript" src="../static/echarts-all-3.js"></script>
+  </head>
+  <body style="height: 100%; margin: 0">
+    <div id="container" style="height: 100%"></div>
+    <script type="text/javascript">
+      var dom = document.getElementById("container");
+      var myChart = echarts.init(dom);
+      var option = {
+        title: {
+          text: '',
+          top: '80%',
+          left: '50%'
+        },
+        tooltip: {
+          trigger:'item',
+          formatter:function(params){
+           if(params.data.name!=undefined){
+             return '人物:'+params.data.name;
+
+           }else{
+             return '关系:'+params.data.label;
+           }
+          }
+        },
+        animation: false,
+        series : [
+        {
+          name: '唐朝诗人社交网络',
+          type: 'graph',
+          layout: 'force',
+          draggable: false,
+          symbolSize: 35,
+          focusNodeAdjacency:true,
+          edgeSymbol:['circle', 'arrow'],
+          edgeSymbolSize:[4, 6],
+          label:{
+            normal:{
+              show:true,
+              textstyle:{
+                fontsize:10
+              },
+              formatter:function(params){
+                return params.data.name;
+              },
+            }
+          },
+          lineStyle:{
+            normal:{
+              curveness: 0.1,
+              color: 'rgb(50, 50, 50)'
+            }
+          },
+
+data:[
+{name: '盧貽'},
+{name: '樊宗懿'},
+{name: '李翺'},
+{name: '韓州仇'},
+{name: '韓雲卿'},
+{name: '李漢'},
+{name: '韓湘'},
+{name: '韓會'},
+{name: '蔣係'},
+{name: '張徹'},
+{name: '韓昶'},
+{name: '韓仲卿'},
+{name: '韓弇'},
+{name: '韓挐'},
+{name: '韓愈'},
+],
+links: [
+{source: '盧貽', target: '韓愈',label:'岳父'
+        },
+       {source: '樊宗懿', target: '韓愈',label:'女婿'
+        },
+       {source: '李翺', target: '韓愈',label:'姪女之夫'
+        },
+       {source: '韓州仇', target: '韓愈',label:'子'
+        },
+       {source: '韓雲卿', target: '韓愈',label:'從父;伯叔父'
+        },
+       {source: '李漢', target: '韓愈',label:'女婿'
+        },
+       {source: '韓湘', target: '韓愈',label:'孫'
+        },
+       {source: '韓會', target: '韓愈',label:'兄'
+        },
+       {source: '蔣係', target: '韓愈',label:'女婿'
+        },
+       {source: '張徹', target: '韓愈',label:'姻親'
+        },
+       {source: '韓昶', target: '韓愈',label:'子'
+        },
+       {source: '韓仲卿', target: '韓愈',label:'父'
+        },
+       {source: '韓弇', target: '韓愈',label:'從兄'
+        },
+       {source: '韓挐', target: '韓愈',label:'女兒'
+        },
+       ],
+
+          roam: false,
+          force: {
+            edgeLength:[100,200],
+            repulsion: 100
+          }
+        }
+        ]
+      };
+      myChart.setOption(option);
+    </script>
+  </body>
+</html>
